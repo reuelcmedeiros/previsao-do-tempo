@@ -1,4 +1,4 @@
-*{
+* {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 
 header {
@@ -31,7 +32,7 @@ main {
     padding: 20px;
 }
 
-#barra-pesquisa{
+#barra-pesquisa {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,14 +43,15 @@ main {
     border-radius: 40px;
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-.icone-de-pesquisa{
+.icone-de-pesquisa {
     height: 20px;
     margin-right: 10px;
 }
 
-#campo-pesquisa{
+#campo-pesquisa {
     width: 250px;
     border: none;
     outline: none;
@@ -66,8 +68,10 @@ input::placeholder {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #clima-atual {
@@ -104,12 +108,19 @@ input::placeholder {
     margin-bottom: 15px;
 }
 
+#previsao {
+    display: grid;
+    gap: 10px;
+}
+
 .dia {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dia:last-child {
@@ -120,6 +131,7 @@ input::placeholder {
     flex: 1;
     text-align: center;
     color: #333;
+    font-weight: 500;
 }
 
 footer {
@@ -127,4 +139,95 @@ footer {
     padding: 20px;
     color: white;
     font-size: 0.9rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #campo-pesquisa {
+        width: 200px;
+    }
+    
+    #clima-atual #temperatura {
+        font-size: 2.5rem;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .dia {
+        padding: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    #barra-pesquisa {
+        width: 90vw;
+        padding: 8px 16px;
+    }
+    
+    #campo-pesquisa {
+        width: 80vw;
+        font-size: 1.1rem;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .card-de-clima {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    #clima-atual #temperatura {
+        font-size: 2rem;
+    }
+    
+    #clima-atual h2 {
+        font-size: 1.5rem;
+    }
+    
+    #previsao {
+        grid-template-columns: 1fr;
+    }
+    
+    .dia {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+    
+    .dia .data, .dia .temp, .dia .desc {
+        flex: none;
+    }
+    
+    footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small */
+@media (max-width: 320px) {
+    #campo-pesquisa {
+        font-size: 1rem;
+    }
+    
+    #clima-atual #temperatura {
+        font-size: 1.8rem;
+    }
 }
