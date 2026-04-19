@@ -6,19 +6,45 @@
     <title>Veja a previsão do tempo!</title> 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="./imagens/OIP.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../imagens/OIP.webp" type="image/x-icon">
 </head>
 <body>
-    <div id="barra-pesquisa">
-       <img class="icone-de-pesquisa" src="./imagens/icone-de-pesquisa.webp" alt="">
-        <input type="text" id="campo-pesquisa" placeholder="Busque a localização">
+    <header>
+        <h1>Previsão do Tempo</h1>
+    </header>
+    
+    <main>
+        <div id="barra-pesquisa">
+            <img class="icone-de-pesquisa" src="../imagens/icone-de-pesquisa.webp" alt="Pesquisar">    
+            <input type="text" id="campo-pesquisa" placeholder="Busque a localização">
         </div>
 
-<div class="card-de-clima">
-     
-</div>
-
+        <div class="card-de-clima">
+            <div id="clima-atual">
+                <!-- Espaço para dados atuais do clima via API -->
+                <h2 id="cidade">Cidade</h2>
+                <div id="temperatura">Temperatura</div>
+                <div id="descricao">Descrição</div>
+                <img id="icone-clima" src="" alt="Ícone do clima">
+            </div>
+            
+            <div id="previsao">
+                <h3>Previsão para os próximos dias</h3>
+                <div class="dia">
+                    <span class="data">Data</span>
+                    <span class="temp">Temp</span>
+                    <span class="desc">Desc</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>2026 Previsão do Tempo. Dados fornecidos por API.</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
